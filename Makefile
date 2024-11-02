@@ -1,4 +1,4 @@
-all: build-clear build-false
+all: build-clear build-false build-true
 
 build-clear:
 	mkdir -p bin
@@ -7,6 +7,10 @@ build-clear:
 build-false:
 	mkdir -p bin
 	gcc -Wall -std=c89 src/false.c -o bin/false
+
+build-true:
+	mkdir -p bin
+	gcc -Wall -std=c89 src/true.c -o bin/true
 
 clean:
 	rm -f bin/clear
